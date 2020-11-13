@@ -25,7 +25,13 @@
         100%{transform: rotate(360deg);}
     }
     .rotates {
-        animation: rotates 7s infinite;
+        animation: rotates 8s infinite;
+    }
+    .mini{
+        animation: rotates 12s infinite;
+    }
+    .mini2{
+        animation: rotates 15s infinite;
     }
     // end animation
 }

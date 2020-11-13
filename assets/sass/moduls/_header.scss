@@ -5,7 +5,7 @@
     @include mixin.animate;
     // header heading 
     position: relative;
-    height: 91vh;
+    height: 90.5vh;
     overflow: hidden;
     &-heading{
        
@@ -17,6 +17,7 @@
             padding-left: 70px;
             box-sizing: border-box;
             h1{
+                font-family: map-get(variabels.$font,'bold');
                 color: map-get(variabels.$color, 'opacity');
                 font-size: 8.8em;
                 text-transform: uppercase;
@@ -80,6 +81,21 @@
                 width: 470px;
              }
          }
+         
+         .header-mini-img{
+             position: relative;
+            .one,.two{ position: absolute;}
+             .one {
+                width: 50px;
+                left: 370px;
+                bottom: -460px;
+             }
+             .two{
+                 width: 100px;
+                 left: 465px;
+                 bottom: -490px;
+             }
+         }
      }
      // end header main
     
@@ -108,4 +124,23 @@
         }
     }
     // end header background
+
+    // header sosial media
+    &-sosial-media{
+        position: absolute;
+        bottom: 25px;
+        left: 70px;
+        i{
+            font-size: 1.5em;
+            color: map-get(variabels.$color,'silver');
+            margin-left: 15px;
+            transition: .2s;
+            cursor: pointer;
+            &:hover {
+                transition: .2s;
+                filter: brightness(.7);
+            }
+        }
+    }
+    // end header sosial media
 }

@@ -15,6 +15,8 @@
         padding-left: 70px;
         width: 15%;
         h1{
+            // font-family: map-get(variabels.$font,'robotoBold');
+            font-family: map-get(variabels.$font,'bold');
             text-transform: uppercase;
             color: map-get(variabels.$color , 'logo' );
         }
