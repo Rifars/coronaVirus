@@ -1,0 +1,111 @@
+@use 'mixin';
+@use 'variabels';
+
+.header {
+    @include mixin.animate;
+    // header heading 
+    position: relative;
+    height: 91vh;
+    overflow: hidden;
+    &-heading{
+       
+        position: relative;
+        // header text
+        .header-text{
+            top: -80px;
+            position: absolute;
+            padding-left: 70px;
+            box-sizing: border-box;
+            h1{
+                color: map-get(variabels.$color, 'opacity');
+                font-size: 8.8em;
+                text-transform: uppercase;
+            }
+        }
+        // end header text
+        // header content
+        .header-content{
+            
+            padding-left: 70px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            position: absolute;
+            top: 200px;
+            width: 540px;
+            p{
+                color: map-get(variabels.$color,'text');
+            }
+            .buttons {
+                margin-top: 40px;
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                a{
+                    display: inline-block;
+                    width: 46%;
+                    height: 40px;
+                    line-height: 39px;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    border: 2px solid map-get(variabels.$color,'purple');
+                    color: map-get(variabels.$color,'logo');
+                    transition: .4s;
+
+                    &:hover {
+                        background-color: map-get(variabels.$color,'purple');
+                        color: map-get(variabels.$color, 'silver');
+                        transition: .4s;
+                    }
+                }
+            }
+
+        }
+        // end header content
+
+    }
+    // end header heading
+     // header main
+     &-main{
+        z-index: 9;
+        position: relative;
+        .header-img.rotates{
+            transform: rotate(0);
+        }
+         .header-img {
+             position: absolute;
+             top: 0;
+             right:230px;
+             img {
+                width: 470px;
+             }
+         }
+     }
+     // end header main
+    
+    //  header background
+    &-background{
+        position: relative;
+        // bottom: 0;
+        width: 100%;
+        
+        .header-background-left{
+            position: absolute;
+            bottom: -580px;
+            background-color: map-get(variabels.$color,'purple');
+            height: 200px;
+            width: 100%;
+            transform: rotate(14deg)translate(-100px,175px);
+        }
+        .header-background-right{
+            position: absolute;
+            bottom: -650px;
+            right: -350px;
+            height: 600px;
+            width: 100%;
+            background-color: map-get(variabels.$color,'purple');
+            transform: rotate(-33deg)translate(-100px,175px);
+        }
+    }
+    // end header background
+}

@@ -20,5 +20,12 @@
         0%{transform: translateY(-800px);}
         100%{transform: translateY(0);opacity: 1;}
     }
+    @keyframes rotates {
+        0%{}
+        100%{transform: rotate(360deg);}
+    }
+    .rotates {
+        animation: rotates 7s infinite;
+    }
     // end animation
 }

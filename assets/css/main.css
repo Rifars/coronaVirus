@@ -7,6 +7,7 @@
 body {
   overflow-x: hidden;
   background-color: white;
+  height: 100vh;
 }
 
 .navbar {
@@ -19,7 +20,7 @@ body {
 .navbar-logo {
   box-sizing: border-box;
   padding-left: 70px;
-  width: 20%;
+  width: 15%;
 }
 .navbar-logo h1 {
   text-transform: uppercase;
@@ -29,7 +30,7 @@ body {
   font-weight: normal;
 }
 .navbar-items {
-  width: 55%;
+  width: 66%;
 }
 .navbar-items ul {
   width: 100%;
@@ -44,8 +45,8 @@ body {
 }
 .navbar-hamburger-button {
   box-sizing: border-box;
-  width: 20%;
-  padding-right: 70px;
+  width: 15%;
+  padding-right: 80px;
   display: flex;
   flex-direction: column;
   height: 60%;
@@ -58,6 +59,140 @@ body {
   height: 5px;
   width: 40px;
   border-radius: 10px;
+}
+
+.header {
+  position: relative;
+  height: 91vh;
+  overflow: hidden;
+}
+@keyframes Left {
+  0% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes Right {
+  0% {
+    transform: translateX(800px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes Top {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes Bottom {
+  0% {
+    transform: translateY(-800px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotates {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header .rotates {
+  animation: rotates 7s infinite;
+}
+.header-heading {
+  position: relative;
+}
+.header-heading .header-text {
+  top: -80px;
+  position: absolute;
+  padding-left: 70px;
+  box-sizing: border-box;
+}
+.header-heading .header-text h1 {
+  color: #53517645;
+  font-size: 8.8em;
+  text-transform: uppercase;
+}
+.header-heading .header-content {
+  padding-left: 70px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  position: absolute;
+  top: 200px;
+  width: 540px;
+}
+.header-heading .header-content p {
+  color: #535176;
+}
+.header-heading .header-content .buttons {
+  margin-top: 40px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.header-heading .header-content .buttons a {
+  display: inline-block;
+  width: 46%;
+  height: 40px;
+  line-height: 39px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #672db9;
+  color: #400496;
+  transition: 0.4s;
+}
+.header-heading .header-content .buttons a:hover {
+  background-color: #672db9;
+  color: #ddd;
+  transition: 0.4s;
+}
+.header-main {
+  z-index: 9;
+  position: relative;
+}
+.header-main .header-img.rotates {
+  transform: rotate(0);
+}
+.header-main .header-img {
+  position: absolute;
+  top: 0;
+  right: 230px;
+}
+.header-main .header-img img {
+  width: 470px;
+}
+.header-background {
+  position: relative;
+  width: 100%;
+}
+.header-background .header-background-left {
+  position: absolute;
+  bottom: -580px;
+  background-color: #672db9;
+  height: 200px;
+  width: 100%;
+  transform: rotate(14deg) translate(-100px, 175px);
+}
+.header-background .header-background-right {
+  position: absolute;
+  bottom: -650px;
+  right: -350px;
+  height: 600px;
+  width: 100%;
+  background-color: #672db9;
+  transform: rotate(-33deg) translate(-100px, 175px);
 }
 
 /*# sourceMappingURL=main.css.map */

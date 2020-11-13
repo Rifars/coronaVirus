@@ -1,10 +1,7 @@
 @use 'mixin';
+@use 'variabels';
 
 .navbar {
-    $color : (
-            'logo'  : #400496,
-            'text'  : #535176, 
-    );
     width: 100%;
     height: 60px;
     display: flex;
@@ -16,10 +13,10 @@
     &-logo{
         box-sizing: border-box;
         padding-left: 70px;
-        width: 20%;
+        width: 15%;
         h1{
             text-transform: uppercase;
-            color: map-get($color , 'logo' );
+            color: map-get(variabels.$color , 'logo' );
         }
         span{
             font-weight: normal;
@@ -29,7 +26,7 @@
 
     // items
     &-items{
-        width: 55%;
+        width: 66%;
         ul {
             width: 100%;
             display: flex;
@@ -38,7 +35,7 @@
             a{
                 text-decoration: none;
                 font-weight: 600;
-                color:map-get($color,'text');
+                color:map-get(variabels.$color,'text');
             }
         }
     }
@@ -47,8 +44,8 @@
     // hamburger button
     &-hamburger-button{
         box-sizing: border-box;
-        width: 20%;
-        padding-right: 70px;
+        width: 15%;
+        padding-right: 80px;
         display: flex;
         flex-direction: column;
         height: 60%;
@@ -56,7 +53,7 @@
         align-items: flex-end;
         cursor: pointer;
         span {
-            background-color: map-get($color,'logo');
+            background-color: map-get(variabels.$color,'logo');
             height: 5px;
             width: 40px;
             border-radius: 10px;
