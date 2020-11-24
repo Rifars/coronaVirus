@@ -12,8 +12,8 @@
     }
 
     @keyframes Top {
-        0%{transform: translateY(800px);}
-        100%{transform: translateY(0);opacity: 1;}
+        0%{transform: translateY(1000px); opacity: 0;}
+        100%{transform: translateY(0); opacity: 1;}
     }
 
     @keyframes Bottom {
@@ -24,14 +24,11 @@
         0%{}
         100%{transform: rotate(360deg);}
     }
+    .left {
+        animation: Left 1s forwards;
+    }
     .rotates {
         animation: rotates 8s infinite;
-    }
-    .mini{
-        animation: rotates 12s infinite;
-    }
-    .mini2{
-        animation: rotates 15s infinite;
     }
     // end animation
 }
