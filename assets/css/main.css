@@ -276,5 +276,14 @@ body {
   transition: 0.2s;
   filter: brightness(0.7);
 }
+.header .licence {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+.header .licence a {
+  color: #aeaeae;
+  font-size: 0.7em;
+}
 
 /*# sourceMappingURL=main.css.map */
